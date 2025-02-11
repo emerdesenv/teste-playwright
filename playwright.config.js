@@ -30,7 +30,7 @@ export default defineConfig({
     baseURL: 'https://www.saucedemo.com/',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: 'on-first-retry'
   },
 
   /* Configure projects for major browsers */
@@ -59,16 +59,7 @@ export default defineConfig({
       name: 'Mobile Safari',
       use: { ...devices['iPhone 12'] },
     },
-    { name: 'setup', testMatch: /.*\.setup\.js/ },
-    {
-      name: 'chromium:saved-credentials',
-      use: { 
-        ...devices['Desktop Chrome'],
-        storageState: 'playwright/.auth/user.json',
-      },
-      dependencies: ['setup'],
-    },
-
+  
     /* Test against branded browsers. */
     // {
     //   name: 'Microsoft Edge',
