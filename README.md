@@ -30,7 +30,6 @@
 
 * **PlayWright** - https://playwright.dev/
 * **Site de Testes** - https://www.saucedemo.com/
-* **FakerJS** - https://fakerjs.dev/
 * **GitHub Actions** - https://docs.github.com/pt/actions
 * **MongoDB Clound Cypress** - https://www.npmjs.com/package/cypress-mongodb
 
