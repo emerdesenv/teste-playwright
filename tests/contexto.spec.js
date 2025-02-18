@@ -17,13 +17,13 @@ test.beforeAll(async () => {
 
 test.use({ storageState: TOKEN_FILEPATH });
 
-test('Já logado, pegando do contexto. @login', async ({ page }) => {
+test('Já logado, pegando do contexto. @contexto', async ({ page }) => {
     await page.goto("https://www.saucedemo.com/inventory.html");
     const texto = await page.waitForSelector('text=Products');
     await texto.scrollIntoViewIfNeeded();
 });
 
-test('Outro teste de texto. @login', async ({ page }) => {
+test('Outro teste de texto. @contexto', async ({ page }) => {
     await page.goto("https://www.saucedemo.com/inventory.html");
     const texto = await page.waitForSelector('text=Bolt');
     await texto.scrollIntoViewIfNeeded();

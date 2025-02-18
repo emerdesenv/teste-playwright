@@ -39,6 +39,7 @@
 * Comando para rodar os testes com tag: **npx playwright test --grep '@login'**
 * Comando para abrir a interface: **npx playwright test --ui**
 * Comando para abrir o debug: **npx playwright test --debug**
+* Comando para abrir o gerador de código: **npx playwright codegen https://www.saucedemo.com/**
 * Rodar o comando: **node app.js** para rodar a API com a conexão com o **MongoDB Clound**
 
 ## Extensões para o Visual Studio Code

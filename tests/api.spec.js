@@ -19,6 +19,17 @@ test('Função para pegar um Carro.', async () => {
     expect(res.status).toBe(200);
 });
 
+test('Deve buscar um post via API. @api', async ({ request }) => {
+    const response = await request.get('https://jsonplaceholder.typicode.com/posts/1');
+
+    expect(response.status()).toBe(200);
+
+    const body = await response.json();
+    
+    expect(body).toHaveProperty('id', 1);
+    expect(body).toHaveProperty('title');
+});
+
 test.afterEach(async ({ page }) => {
     // Limpeza após os testes
     await mongoose.disconnect();
