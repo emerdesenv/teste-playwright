@@ -8,7 +8,6 @@ test.beforeEach(async ({ page }) => {
     // Configuração antes de rodar os testes (ex: conexão com o MongoDB)
     await mongoose.connect(process.env.MONGODB_URI);
 });
-
 test('Função para pegar um Carro.', async () => {
     var userId = '67991afb2a565f894cb0ee47';
 
@@ -18,7 +17,6 @@ test('Função para pegar um Carro.', async () => {
     // Verifica se o conteúdo é um objeto válido
     expect(res.status).toBe(200);
 });
-
 test('Deve buscar um post via API. @api', async ({ request }) => {
     const response = await request.get('https://jsonplaceholder.typicode.com/posts/1');
 
@@ -29,7 +27,6 @@ test('Deve buscar um post via API. @api', async ({ request }) => {
     expect(body).toHaveProperty('id', 1);
     expect(body).toHaveProperty('title');
 });
-
 test.afterEach(async ({ page }) => {
     // Limpeza após os testes
     await mongoose.disconnect();
