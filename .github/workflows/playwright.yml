@@ -13,10 +13,12 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: lts/*
-        
     - name: Instalando dependencias
       run: npm install
-   
+
+    - name: Instalando Playwright Navegadores
+      run: npx playwright install --with-deps
+      
     - name: Rodando Playwright testes
       run: npx playwright test
     - uses: actions/upload-artifact@v4
