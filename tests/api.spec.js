@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const request = require('supertest');
 
 import { test, expect } from '@playwright/test';
-
 test.beforeEach(async ({ page }) => {
     // Configuração antes de rodar os testes (ex: conexão com o MongoDB)
     await mongoose.connect(process.env.MONGODB_URI);
