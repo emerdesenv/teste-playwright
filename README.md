@@ -1,6 +1,7 @@
 ## Temas Abordados neste Projeto PlayWright
 
 * Testes E2E
+* Testes de API
 * Testes com Multiplos Navegadores
 * Testes Mobile (Web)
 * GitHub Actions

@@ -11,8 +11,6 @@ test.describe('Teste de Fluxo de Compra @compra', () => {
         // Instancia dos Page Objects
         const loginPage = new LoginPage(page);
         const inventoryPage = new InventoryPage(page);
-        const cartPage = new CartPage(page);
-        const checkoutPage = new CheckoutPage(page);
 
         await test.step('Acessar a página de login e realizar o login', async () => {
             await loginPage.goto();
@@ -24,14 +22,18 @@ test.describe('Teste de Fluxo de Compra @compra', () => {
         });
 
         await test.step(`Selecionar o produto "${loginData.productName}" e adicioná-lo ao carrinho`, async () => {
-         await inventoryPage.addProductToCart(loginData.productName);
+            await inventoryPage.addProductToCart(loginData.productName);
         });
+
+        const cartPage = new CartPage(page);
 
         await test.step('Acessar o carrinho e validar o produto selecionado', async () => {
             await inventoryPage.goToCart();
             await expect(page).toHaveURL(/cart.html/);
             await cartPage.verifyProductInCart(loginData.productName);
         });
+
+        const checkoutPage = new CheckoutPage(page);
 
         await test.step('Preencher informações de checkout e finalizar a compra', async () => {
             await cartPage.checkout();
