@@ -7,7 +7,7 @@ test.beforeEach(async ({ page }) => {
     // Configuração antes de rodar os testes (ex: conexão com o MongoDB)
     await mongoose.connect(process.env.MONGODB_URI);
 });
-test('Função para pegar um Carro.', async () => {
+test('Função para pegar um Carro. @api', async () => {
     var userId = '67991afb2a565f894cb0ee47';
 
     // Enviar requisição para buscar o carro

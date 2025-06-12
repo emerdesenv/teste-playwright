@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {},
     "keywords": [],
-    "author": "",
+    "author": "Emerson Amancio",
     "license": "ISC",
     "devDependencies": {
         "@playwright/test": "^1.50.1",
